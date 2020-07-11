@@ -10,8 +10,6 @@ char* step(int rows, int columns, char* prevSimulation);
 
 int main(int argc, char* argv[])
 {
-	printf("Content-type:text/plain\n\n");
-
   int rows = atoi(argv[1]);
   if(rows <= 0)
   {
