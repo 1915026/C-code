@@ -1,9 +1,17 @@
 # Game of Life
-argc[1] is for number of rows you want.
-argc[2] is for number of columns.
+I found this task really very interesting. Firstly I explored what GoL actually is and its rules which were as follows :-
 
-![WhatsApp Image 2020-07-11 at 2 43 30 PM](https://user-images.githubusercontent.com/54345655/87220856-20686280-c385-11ea-9946-38915b83451a.jpeg)
+  + Any live cell with fewer than two live neighbors dies, as if caused by under population.
+  + Any live cell with two or three live neighbors lives on to the next generation.
+  + Any live cell with more than three live neighbors dies, as if by overpopulation.
+  + Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
 
-Output:
+Firstly I found it quite difficult as very few tutorials were availabe for the same (particularly in C language).
+Then I found this :- [https://youtu.be/flYIkz4XHQc](https://youtu.be/flYIkz4XHQc)
+which was very helpful as he explianed it step by step.
 
-![WhatsApp Image 2020-07-11 at 2 48 36 PM](https://user-images.githubusercontent.com/54345655/87220934-ce740c80-c385-11ea-9857-d998b07f4363.jpeg)
+For more clarity of the code I took help of @jaswant, GD member.
+
+In case the user donot pass command line arguments, so I have used scanf as well as command line arguments to get input for number of rows and columns.
+
+I have a doubt, what if I want to execute this on browser while taking input from user.
