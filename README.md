@@ -7,6 +7,7 @@ I found this task really very interesting. Firstly I explored what GoL actually 
   + Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
 
 Firstly I found it quite difficult as very few tutorials were availabe for the same (particularly in C language).
+
 Then I found this :- [https://youtu.be/flYIkz4XHQc](https://youtu.be/flYIkz4XHQc)
 which was very helpful as he explianed it step by step.
 
