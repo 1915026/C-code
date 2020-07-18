@@ -10,7 +10,11 @@ char* step(int rows, int columns, char* prevSimulation);
 
 int main(int argc, char* argv[])
 {
-  int rows = atoi(argv[1]);
+  int i,rows,columns;
+
+        if(argc == 3)
+{
+         rows = atoi(argv[1]);
   if(rows <= 0)
   {
     printf("Row count must be greater than zero. Was %d\n", rows);
@@ -18,13 +22,23 @@ int main(int argc, char* argv[])
   }
   rows+=2;
 
-  int columns = atoi(argv[2]);
+         columns = atoi(argv[2]);
   if(columns <= 0)
-  {
+ {
     printf("Column count must be greater than zero. Was %d\n", columns);
     return -1;
   }
   columns+=2;
+}
+        else
+        {
+                 rows,columns;
+                printf("Enter numer of rows:");
+                scanf("%d",&rows);
+                printf("Enter numer of rows:");
+                scanf("%d",&columns);
+        }
+
 
   begin(rows, columns);
 
@@ -61,6 +75,11 @@ int countNeighborhood(int rows, int columns, int x, int y, char* simulation)
     return count;
 }
 
+ /* Any live cell with fewer than two live neighbors dies, as if caused by under population.
+    Any live cell with two or three live neighbors lives on to the next generation.
+    Any live cell with more than three live neighbors dies, as if by overpopulation.
+    Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+*/
 char* step(int rows, int columns, char* prevSimulation)
 {
     char* steppedSimulation = calloc(rows*columns, sizeof(int));
